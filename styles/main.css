@@ -1,24 +1,17 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-image: url('../images/bg.jpg');
+body{
+  background: url('./../images/bg.jpg') top left / cover no-repeat;
 }
 
-nav li {
+ul{
   list-style: none;
-  background-color: darkred;
-  font-size: 3;
-  color: white;
-  margin: 10px;
-  text-align: center;
-}
-nav ul {
-  padding: 0px;
+  padding-left: unset;
 }
 
-.top {
-  text-align: right;
+a{
+  text-decoration: none;
 }
 
 .fab, .fas {
@@ -28,55 +21,92 @@ nav ul {
 }
 
 .fa-facebook-square {
-  color: darkblue;
+  color: #485793;
 }
 .fa-rss-square{
-  color: yellow;
+  color: #C39245;
 }
 
 .fa-twitter-square {
-  color: lightblue;
+  color: #718CC2;
 }
 
 .fa-youtube{
-  color: red;
+  color: #A54035;
 }
 
-.header {
-  border: solid 10px white;
+.nav--main .nav__list{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav--main .nav__item{
+  background-color: red;
+}
+
+.nav--main .nav__link{
+  color: #fff;
+}
+
+.nav--main .nav__item:not(:last-child){
+  margin-right: 10px;
+}
+
+#carousel{
+  height: 365px;
+  background: url('./../images/top-image.png') no-repeat -120px -120px;
   position: relative;
-}
-.on-top img{
-  margin-top: -10%;
-margin-bottom: -22%;
+  overflow: hidden;
 }
 
-.on-top {
-  position: absolute;
-  top: 0;
-  opacity: .5;
-  width: 1500px;
-  height: 930px;
+#carousel::before{
+  content: url('./../images/grid.png');
+  opacity: 0.3;
 }
 
-.logo {
-  width: 35%;
+#carousel > .logo{
   position: absolute;
   top: 50%;
-  left: 1%;
+  left: 2%;
+  transform: translateY(-50%);
 }
 
-
-.post-sk8 section {
-  background-color: white;
-  margin: 10px;
-  padding: 30px
-}
-h2 {
-  font-size: 1.5rem;
+#news article{
+  background-color: #fff;
+  padding: 20px;
 }
 
-.info-btn {
+#skateboarders img{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.skateboarder{
+  border: solid 5px #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.skateboarder_lance{
+  margin-right: 1.5rem;
+}
+
+.skateboarder_tommy{
+  height: 100%;
+}
+
+.skateboarder span{
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.btn-link {
   border: none;
   background-color: white;
   font-weight: bold;
@@ -88,50 +118,10 @@ h2 {
   margin-left: 35%;
 }
 
-.celebs {
-  margin-bottom: -55px;
-}
 
-.celebs img{
-  border: solid 5px white;
-  width: 100%;
-}
-.on-right img{
-  height: 86%;
-}
-
-.celeb1 {
-  margin-bottom: 10px;
-}
-
-.container{
-  position: relative;
-  text-align: center;
-}
-
-.imgtext{
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  z-index: 9;
-}
-
-.skates {
-  background-color: white;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.skateboard {
-background-color: transparent;
-margin-bottom: 2%;
-margin-top: 2%;
-}
-.skateboard img {
-  display: inline-block;
-  transform: rotate(90deg);
-  margin-left: -100px;
-  margin-right: -100px;
+#skateboards{
+  background: #fff;
+  padding: 20px;
 }
 
 .fill-skate{
@@ -157,4 +147,15 @@ margin-top: 2%;
 
 #social-icons{
   color: #CACACA;
+  height: 10px;
+}
+
+
+@media (min-width: 768px){
+  .skateboard-image{
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(-25%);
+    height: 260px;
+    width: 65px;
+  }
 }
